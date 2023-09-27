@@ -4,7 +4,7 @@ from im2col import im2col
 from col2im import col2im
 from batch_thresholding import batch_thresholding
 import matplotlib.pyplot as plt
-import MyTiler as MT
+#import MyTiler as MT
 from omp import omp
 
 def dct_image_denoising(noisy_im, D_DCT, epsilon):
