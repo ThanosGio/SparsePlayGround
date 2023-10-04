@@ -27,8 +27,8 @@ def dct_image_denoising(noisy_im, D_DCT, epsilon):
     # Divide the noisy image into fully overlapping patches
     patches = im2col(noisy_im, patch_size, stepsize=1)
 
-    [est_patches, est_coeffs] = batch_thresholding(D_DCT, patches, epsilon)
-    # [est_patches, est_coeffs] = omp(D_DCT, patches, 10, epsilon)
+    #[est_patches, est_coeffs] = batch_thresholding(D_DCT, patches, epsilon)
+    [est_patches, est_coeffs] = omp(D_DCT, patches, 10, epsilon)
     # [est_patches, est_coeffs] = omp(D_DCT, patches, k, epsilon)
 
     # print("est patches shape", est_patches.shape)
